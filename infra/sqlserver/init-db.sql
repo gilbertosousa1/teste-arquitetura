@@ -39,7 +39,7 @@ BEGIN
         Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
         Valor DECIMAL(18,2) NOT NULL,
         Tipo INT NOT NULL, -- 1 = Crédito | 2 = Débito
-        Lancamento DATETIME2 NOT NULL,
+        DataLancamento DATETIME2 NOT NULL,
         DataCriacao DATETIME2 NOT NULL DEFAULT SYSDATETIME()
     );
 
