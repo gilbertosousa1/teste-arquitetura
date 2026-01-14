@@ -1,0 +1,11 @@
+IF DB_ID('LancamentosDB') IS NULL
+BEGIN
+    CREATE DATABASE LancamentosDB;
+END
+GO
+
+IF DB_ID('ConsolidadoDB') IS NULL
+BEGIN
+    CREATE DATABASE ConsolidadoDB;
+END
+GO
