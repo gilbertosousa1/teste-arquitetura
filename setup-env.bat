@@ -5,19 +5,20 @@ setx SA_PASSWORD "StrongPass!123"
 setx RABBITMQ_USER "admin"
 setx RABBITMQ_PASS "admin"
 
-setx RabbitMQ__Host "rabbitmq" 
+setx RabbitMQ__Host "localhost" 
 setx RabbitMQ__Port "5672" 
-setx RabbitMQ__VHost "/"
+setx RabbitMQ__VirtualHost "/"
 setx RabbitMQ__Exchange "lancamentos-exchange"
 setx RabbitMQ__ExchangeType "topic"
 setx RabbitMQ__Queue "lancamentos-queue"
 setx RabbitMQ__RoutingKey "lancamentos.*"
 setx RabbitMQ__User "admin"
-setx RabbitMQ__Pass "admin"
+setx RabbitMQ__Password "admin"
 
 setx SQL_CONNECTION "Server=sqlserver;Database=LancamentosDb;User Id=sa;Password=StrongPass!123;TrustServerCertificate=True"
 
 setx ConnectionStrings__lancamentosDB "Server=sqlserver;Database=LancamentosDB;User Id=sa;Password=StrongPassword!123;TrustServerCertificate=True"
+setx ConnectionStrings__consolidadoDB "Server=sqlserver;Database=ConsolidadoDB;User Id=sa;Password=StrongPassword!123;TrustServerCertificate=True"
 
 
 
