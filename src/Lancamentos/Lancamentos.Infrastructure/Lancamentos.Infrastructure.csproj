@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Lancamentos.Util\Lancamentos.Util.csproj" />
     <ProjectReference Include="..\Lancamentos.Domain\Lancamentos.Domain.csproj" />
+    <ProjectReference Include="..\Lancamentos.Util\Lancamentos.Util.csproj" />
   </ItemGroup>
 
 </Project>

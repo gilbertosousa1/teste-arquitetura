@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lancamentos.Infrastructure"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lancamentos.Tests", "Lancamentos\Lancamentos.Tests\Lancamentos.Tests.csproj", "{D2DA4C91-D425-4AF1-A491-F67B825FBD63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lancamentos.Business", "Lancamentos.Business\Lancamentos.Business.csproj", "{3BFAA6CB-3720-480E-8521-9BC3205246C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lancamentos.Business", "Lancamentos\Lancamentos.Business\Lancamentos.Business.csproj", "{3BFAA6CB-3720-480E-8521-9BC3205246C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lancamentos.Util", "Lancamentos.Util\Lancamentos.Util.csproj", "{4B267171-3309-44FB-BE04-921163ACE7F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lancamentos.Util", "Lancamentos\Lancamentos.Util\Lancamentos.Util.csproj", "{4B267171-3309-44FB-BE04-921163ACE7F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
