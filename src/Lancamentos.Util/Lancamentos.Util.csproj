@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Lancamentos.Util\Lancamentos.Util.csproj" />
-  </ItemGroup>
-
 </Project>
