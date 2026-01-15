@@ -1,4 +1,4 @@
-ï»¿using Lancamentos.Business.LancamentoBLL;
+using Lancamentos.Business.LancamentoBLL;
 using Lancamentos.Business.LancamentoBLL.Interface;
 using Lancamentos.Domain;
 using Lancamentos.Infrastructure.Persistence.LancamentosDB;
@@ -14,13 +14,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ðŸ”¹ ConfiguraÃ§Ã£o Banco de Dados
+// ?? Configuração Banco de Dados
 builder.Services.AddDbContext<Lancamentos.Infrastructure.Persistence.LancamentosDB.Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("lancamentosDB")));
 
 builder.Services.AddScoped<ILancamentoRepository, LancamentoRepository>();
 builder.Services.AddScoped<IPostData, PostData>();
 
-// ðŸ”¹ ConfiguraÃ§Ã£o RabbitMQ
+// ?? Configuração RabbitMQ
 builder.Services.Configure<RabbitMqOptions>(builder.Configuration.GetSection("RabbitMQ"));
 
 builder.Services.AddScoped<IRabbitMqPublisher, RabbitMqPublisher>();
@@ -46,5 +46,6 @@ var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
+
 
 app.Run();
