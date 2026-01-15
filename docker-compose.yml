@@ -33,8 +33,10 @@ services:
       - "5672:5672"
       - "15672:15672"
     environment:
-      RABBITMQ_DEFAULT_USER: "${RABBITMQ_USER}"
-      RABBITMQ_DEFAULT_PASS: "${RABBITMQ_PASS}"
+      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: >
+        -rabbitmq_management load_definitions "/etc/rabbitmq/definitions.json"
+    volumes:
+      - ./infra/rabitMq/definitions.json:/etc/rabbitmq/definitions.json
 
   lancamentos.api:
     build:
