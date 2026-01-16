@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integrador.Business", "Inte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integrador.Util", "Integrador\Integrador.Util\Integrador.Util.csproj", "{4B267171-3309-44FB-BE04-921163ACE7F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integrador.Worker", "Integrador.Worker\Integrador.Worker.csproj", "{336767E4-361E-4C40-A330-97901DE647AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integrador.Worker", "Integrador\Integrador.Worker\Integrador.Worker.csproj", "{336767E4-361E-4C40-A330-97901DE647AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

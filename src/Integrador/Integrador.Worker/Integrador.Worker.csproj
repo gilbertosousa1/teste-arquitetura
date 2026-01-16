@@ -18,9 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Integrador\Integrador.Business\Integrador.Business.csproj" />
-    <ProjectReference Include="..\Integrador\Integrador.Domain\Integrador.Domain.csproj" />
-    <ProjectReference Include="..\Integrador\Integrador.Infrastructure\Integrador.Infrastructure.csproj" />
+    <ProjectReference Include="..\Integrador.Business\Integrador.Business.csproj" />
+    <ProjectReference Include="..\Integrador.Domain\Integrador.Domain.csproj" />
+    <ProjectReference Include="..\Integrador.Infrastructure\Integrador.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
