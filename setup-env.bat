@@ -15,11 +15,10 @@ setx RabbitMQ__RoutingKey "lancamentos.*"
 setx RabbitMQ__User "admin"
 setx RabbitMQ__Password "admin"
 
-setx SQL_CONNECTION "Server=sqlserver;Database=LancamentosDb;User Id=sa;Password=StrongPass!123;TrustServerCertificate=True"
+setx SQL_CONNECTION "Server=localhost;Database=LancamentosDb;User Id=sa;Password=StrongPass!123;TrustServerCertificate=True"
 
-setx ConnectionStrings__lancamentosDB "Server=sqlserver;Database=LancamentosDB;User Id=sa;Password=StrongPassword!123;TrustServerCertificate=True"
-setx ConnectionStrings__consolidadoDB "Server=sqlserver;Database=ConsolidadoDB;User Id=sa;Password=StrongPassword!123;TrustServerCertificate=True"
-
+setx ConnectionStrings__lancamentosDB "Server=localhost;Database=LancamentosDB;User Id=sa;Password=StrongPass!123;TrustServerCertificate=True"
+setx ConnectionStrings__consolidadoDB "Server=localhost;Database=ConsolidadoDB;User Id=sa;Password=StrongPass!123;TrustServerCertificate=True"
 
 
 

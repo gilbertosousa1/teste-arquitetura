@@ -18,7 +18,8 @@ namespace Consolidado.Domain.Entities.DTO
         {
             DataLancamento = saldoDiario.DataLancamento;
             TotalCreditos = saldoDiario.TotalCreditos;
-            TotalDebitos = saldoDiario.SaldoFinal;
+            TotalDebitos = saldoDiario.TotalDebitos;
+            SaldoFinal = saldoDiario.SaldoFinal;
         }
     }
 }

@@ -28,6 +28,8 @@ namespace Consolidado.Business.LancamentoBLL
             var dtLancamento = DateTime.Parse(dataLancamento);
             var data = _repository.GetSaldo(dtLancamento);
 
+            ret.Data = data.Select(d => new SaldoDiarioData(d)).ToList();
+
             return ret;
         }
 

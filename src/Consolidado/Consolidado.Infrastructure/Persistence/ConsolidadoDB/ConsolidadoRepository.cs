@@ -18,7 +18,7 @@ namespace Consolidado.Infrastructure.Persistence.ConsolidadoDB
 
         public List<SaldoDiario> GetSaldo(DateTime dataLancamento)
         {
-            return _context.SaldosDiario.Where(s => s.DataLancamento == dataLancamento).ToList();
+            return _context.SaldosDiario.AsNoTracking().Where(s => s.DataLancamento == dataLancamento).ToList();
         }
     }
 }
