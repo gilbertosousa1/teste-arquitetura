@@ -17,6 +17,7 @@ A arquitetura foi pensada para ser:
 
 ## 🚀 Quick Start
 
+
 ### Pré-requisitos
 
 - ✅ .NET 8.0 SDK
@@ -371,6 +372,11 @@ docker logs sqlserver | grep health
 ---
 
 ## 📊 Arquitetura em Camadas
+
+
+### Diegrama da Arquitetura da Solução
+
+Disponível no arquivo **documentacao/Arquitetura.drawio**
 
 ### Consolidado
 
