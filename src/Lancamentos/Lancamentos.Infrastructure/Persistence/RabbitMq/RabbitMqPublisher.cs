@@ -1,12 +1,7 @@
 ﻿using Lancamentos.Infrastructure.Persistence.RabbitMq.Interface;
-using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace Lancamentos.Infrastructure.Persistence.RabbitMq
 {

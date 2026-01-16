@@ -1,5 +1,4 @@
-﻿using Lancamentos.Business.LancamentoBLL;
-using Lancamentos.Business.LancamentoBLL.Interface;
+﻿using Lancamentos.Business.LancamentoBLL.Interface;
 using Lancamentos.Domain.Entities.DTO;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,7 +17,7 @@ namespace Lancamentos.Api.Controllers
         public LancamentoController(IPostData service)
         {
             _service = service;
-           // _postData = postData;
+            // _postData = postData;
         }
 
         // POST api/<LancamentoController>

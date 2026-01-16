@@ -1,6 +1,6 @@
-using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using Consolidado.Application.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace Consolidado.Application.Controllers;
 

@@ -1,6 +1,5 @@
 ﻿using Lancamentos.Domain.Entities.LancamentosDB;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Metadata;
 
 
 namespace Lancamentos.Infrastructure.Persistence.LancamentosDB

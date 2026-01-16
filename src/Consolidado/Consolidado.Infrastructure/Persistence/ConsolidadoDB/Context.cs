@@ -1,6 +1,5 @@
 ﻿using Consolidado.Domain.Entities.ConsolidadoDB;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Metadata;
 
 
 namespace Consolidado.Infrastructure.Persistence.ConsolidadoDB

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lancamentos.Infrastructure.Persistence.RabbitMq
+﻿namespace Lancamentos.Infrastructure.Persistence.RabbitMq
 {
     public class RabbitMqOptions
-{
+    {
         public string Host { get; set; }
         public int Port { get; set; }
         public string User { get; set; }

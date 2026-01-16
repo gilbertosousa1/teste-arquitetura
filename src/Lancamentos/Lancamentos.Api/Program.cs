@@ -1,6 +1,5 @@
 using Lancamentos.Business.LancamentoBLL;
 using Lancamentos.Business.LancamentoBLL.Interface;
-using Lancamentos.Domain;
 using Lancamentos.Infrastructure.Persistence.LancamentosDB;
 using Lancamentos.Infrastructure.Persistence.LancamentosDB.Interface;
 using Lancamentos.Infrastructure.Persistence.RabbitMq;

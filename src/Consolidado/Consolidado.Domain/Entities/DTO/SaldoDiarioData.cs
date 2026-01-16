@@ -1,9 +1,4 @@
 ﻿using Consolidado.Domain.Entities.ConsolidadoDB;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Consolidado.Domain.Entities.DTO
 {

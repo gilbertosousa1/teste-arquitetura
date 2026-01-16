@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Consolidado.Business.LancamentoBLL.Interface
+namespace Integrador.Infrastructure.Persistence.RabbitMq
 {
-    public interface IMessagePublisher
+    internal class Class1
     {
-        Task PublishAsync<T>(T message);
     }
 }

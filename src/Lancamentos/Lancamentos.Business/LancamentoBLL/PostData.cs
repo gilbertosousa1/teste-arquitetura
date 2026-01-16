@@ -1,16 +1,8 @@
-﻿using Lancamentos.Domain;
-using Lancamentos.Domain.Entities.DTO;
+﻿using Lancamentos.Domain.Entities.DTO;
 using Lancamentos.Domain.Entities.LancamentosDB;
-using Lancamentos.Infrastructure.Persistence.LancamentosDB;
 using Lancamentos.Infrastructure.Persistence.LancamentosDB.Interface;
-using Lancamentos.Infrastructure.Persistence.RabbitMq;
 using Lancamentos.Infrastructure.Persistence.RabbitMq.Interface;
 using Lancamentos.Util.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lancamentos.Business.LancamentoBLL
 {
@@ -42,7 +34,7 @@ namespace Lancamentos.Business.LancamentoBLL
             lancamento = await _repository.AddAsync(lancamento);
 
             // 2️ - Publica evento
-            await _publisher.PublishAsync( exchange: "lancamentos.exchange", routingKey: "lancamento.criado", message: lancamento);
+            await _publisher.PublishAsync(exchange: "lancamentos.exchange", routingKey: "lancamento.criado", message: lancamento);
 
             return ret;
         }

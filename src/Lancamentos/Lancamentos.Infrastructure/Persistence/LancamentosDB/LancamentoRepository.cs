@@ -12,7 +12,7 @@ namespace Lancamentos.Infrastructure.Persistence.LancamentosDB
         public LancamentoRepository(LancamentosDbContext context)
         {
             _context = context;
-            Console.WriteLine(context.Database.GetConnectionString()?? "CONNECTION STRING NULL");
+            Console.WriteLine(context.Database.GetConnectionString() ?? "CONNECTION STRING NULL");
         }
 
         public async Task<Lancamento> AddAsync(Lancamento lancamento)

@@ -1,6 +1,5 @@
 using Consolidado.Business.LancamentoBLL;
 using Consolidado.Business.LancamentoBLL.Interface;
-using Consolidado.Domain;
 using Consolidado.Infrastructure.Persistence.ConsolidadoDB;
 using Consolidado.Infrastructure.Persistence.ConsolidadoDB.Interface;
 

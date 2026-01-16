@@ -1,5 +1,4 @@
-﻿using Consolidado.Business.LancamentoBLL;
-using Consolidado.Business.LancamentoBLL.Interface;
+﻿using Consolidado.Business.LancamentoBLL.Interface;
 using Consolidado.Domain.Entities.DTO;
 using Microsoft.AspNetCore.Mvc;
 

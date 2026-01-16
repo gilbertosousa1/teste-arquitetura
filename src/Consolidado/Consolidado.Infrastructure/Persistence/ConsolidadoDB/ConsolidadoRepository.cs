@@ -1,5 +1,4 @@
 ﻿using Consolidado.Domain.Entities.ConsolidadoDB;
-using Consolidado.Domain.Entities.DTO;
 using Microsoft.EntityFrameworkCore;
 using ConsolidadoDBContext = Consolidado.Infrastructure.Persistence.ConsolidadoDB.Context;
 
@@ -13,7 +12,7 @@ namespace Consolidado.Infrastructure.Persistence.ConsolidadoDB
         public ConsolidadoRepository(ConsolidadoDBContext context)
         {
             _context = context;
-            Console.WriteLine(context.Database.GetConnectionString()?? "CONNECTION STRING NULL");
+            Console.WriteLine(context.Database.GetConnectionString() ?? "CONNECTION STRING NULL");
         }
 
         public List<SaldoDiario> GetSaldo(DateTime dataLancamento)
