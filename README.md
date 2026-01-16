@@ -152,7 +152,19 @@ dotnet build src/Integrador.sln
 
 ## 🏃 Executando os Serviços
 
-### Opção 1: Docker Compose (Recomendado)
+### Opção 1: Execução das Bats
+
+1- Configurar as Variáveis de ambiente
+```bash
+setup-env.bat
+```
+2- Iniciar todas as aplicações automáticas
+```bash
+start-project.bat
+```
+
+
+### Opção 2: Docker Compose (Recomendado)
 
 ```bash
 # Compilar as Imagens Docker
@@ -164,26 +176,30 @@ docker-compose up -d
 
 Serão iniciados e gerenciados automaticamente o banco de dados SqlServer e RabbitMQ.
 
-### Opção 2: Execução Local (Desenvolvimento)
+### Opção 3: Execução Local (Desenvolvimento)
 
 **Terminal 1 - Consolidado.Api:**
 ```bash
 cd src/Consolidado/Consolidado.Api
 dotnet run
-# API disponível em: https://localhost:5001 | http://localhost:5000
+# API disponível em: http://localhost:5176
 ```
 
 **Terminal 2 - Lancamentos.Api:**
 ```bash
 cd src/Lancamentos/Lancamentos.Api
 dotnet run
-# API disponível em: https://localhost:5001 | http://localhost:5000
+# API disponível em: http://localhost:5177
 ```
 
 **Terminal 3 - Integrador.Worker:**
+
+<h3 style='color:red'>Caso o Integrador não subir automático devido a erro de conexão com o RabbitMq por favor recompilar e rodar via Debug do Visual Studio</h3>
+
 ```bash
 cd src/Integrador/Integrador.Worker
 dotnet run
+
 # Worker iniciado e aguardando mensagens
 ```
 
@@ -716,7 +732,6 @@ Ao iniciar o projeto, certifique-se de:
 - [ ] Docker Compose iniciado com sucesso
 - [ ] Banco de dados migrado
 - [ ] Projetos compilam sem erros
-- [ ] Testes passam localmente
 - [ ] APIs acessíveis no Swagger
 
 ---

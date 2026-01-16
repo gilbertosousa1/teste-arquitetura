@@ -1,6 +1,3 @@
-start "" cmd /k "setup-env.bat"
-
-
 echo Iniciando o Teste
 
 echo Finalizando imagens Docker existentes...
@@ -37,9 +34,3 @@ start "" cmd /k "start-lancamentos.bat"
 
 start chrome http://localhost:5177/swagger/index.html
 
-
-
-echo Iniciando a Compilação da Solução Integrador.sln...
-dotnet build src/Integrador.sln
-
-start "" cmd /k "start-integrador.bat"
