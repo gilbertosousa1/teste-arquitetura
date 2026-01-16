@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "708b3c93-33a7-4427-ac4d-e6cca62a72eb",
+		"name": "TesteArquitetura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4274929"
+	},
+	"item": [
+		{
+			"name": "Lancamentos",
+			"item": [
+				{
+					"name": "Lancamento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"valor\": -2330,\r\n  \"tipo\": 1,\r\n  \"dataLancamento\": \"2026-01-16T05:59:19.538Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5177/api/Lancamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5177",
+							"path": [
+								"api",
+								"Lancamento"
+							]
+						},
+						"description": "# API Lancamento - Criar Lançamento\n\n## Visão Geral\n\nEste endpoint cria um novo lançamento financeiro no sistema. Um \"lançamento\" representa uma transação ou movimentação financeira que registra movimentos monetários com metadados associados como tipo, datas e valores.\n\n## Detalhes da Requisição\n\n**Método:** `POST`  \n**Endpoint:** `http://localhost:5177/api/Lancamento`  \n**Content-Type:** `application/json`\n\n## Parâmetros do Corpo da Requisição\n\nO corpo da requisição deve ser um objeto JSON com os seguintes campos:\n\n| Parâmetro | Tipo | Obrigatório | Descrição |\n| --- | --- | --- | --- |\n| `valor` | number | Sim | O valor monetário da transação. Valor numérico representando o montante financeiro (ex: 2330) |\n| `tipo` | integer | Sim | Tipo/categoria do lançamento. Código numérico que classifica a entrada Sendo os valores válidos:  <br>**1 - para Crédito**  <br>**2 - para Débito** |\n| `dataLancamento` | string (datetime) | Sim | A data de lançamento no formato ISO 8601 (ex: \"2026-01-16T05:59:19.538Z\") |\n\n### Exemplo de Corpo da Requisição\n\n``` json\n{  \n  \"valor\": 2330,\n  \"tipo\": 1,\n  \"dataLancamento\": \"2026-01-16T05:59:19.538Z\"\n}\n\n ```\n\n## Resposta Esperada\n\nA API deve retornar uma resposta indicando o sucesso ou falha da operação de criação do lançamento. Respostas comuns incluem:\n\n- **200**: Lançamento criado com sucesso\n    \n- **500**: Erro interno do servidor\n    \n\n## Notas de Uso\n\n- Certifique-se de que todos os campos de data/hora seguem o formato ISO 8601 com informações de fuso horário\n    \n- O campo `valor` deve representar o montante na menor unidade monetária (ex: centavos)\n    \n- O campo `tipo` usa códigos numéricos - sendo como valores válidos **1 - Para Crédito e 2 - Para Débito**\n    \n- Tanto `dataLancamento` quanto `dataCriacao` são obrigatórios e devem ser definidos apropriadamente de acordo com a lógica de negócio\n    \n- O endpoint aceita respostas `text/plain` conforme indicado pelo header Accept"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consolidado",
+			"item": [
+				{
+					"name": "GetConsolidado",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5176/api/SaldoDiario?dataLancamento=2025-01-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5176",
+							"path": [
+								"api",
+								"SaldoDiario"
+							],
+							"query": [
+								{
+									"key": "dataLancamento",
+									"value": "2025-01-01"
+								}
+							]
+						},
+						"description": "# Obter Saldo Diário\n\n## Visão Geral\n\nEste endpoint recupera o saldo diário para uma data específica. Retorna informações de saldo financeiro com base na data de lançamento fornecida como parâmetro de consulta.\n\n## Detalhes da Requisição\n\n**Método:** `GET`\n\n**Endpoint:** `http://localhost:5176/api/SaldoDiario`\n\n**Cabeçalhos:**\n\n- `accept: text/plain`\n    \n\n## Parâmetros de Consulta\n\n| Parâmetro | Tipo | Obrigatório | Formato | Descrição |\n| --- | --- | --- | --- | --- |\n| `dataLancamento` | string | Sim | YYYY-MM-DD | A data de lançamento para a qual o saldo diário será recuperado. Utilizado para filtrar registros de saldo por data. |\n\n### Detalhes dos Parâmetros\n\n- **dataLancamento**: Parâmetro de data que especifica qual dia terá o saldo recuperado\n    - Formato: Formato de data ISO 8601 (YYYY-MM-DD)\n        \n    - Exemplo: `2025-01-01`\n        \n\n## Resposta\n\nO endpoint retorna as informações de saldo diário em formato de texto simples para a data especificada.\n\n**Content-Type:** `text/plain`\n\n## Exemplo de Uso\n\n### Requisição\n\n``` http\nGET http://localhost:5176/api/SaldoDiario?dataLancamento=2025-01-01\nAccept: text/plain\n\n ```\n\n### Exemplo cURL\n\n``` bash\ncurl -X GET \"http://localhost:5176/api/SaldoDiario?dataLancamento=2025-01-01\" \\\n  -H \"accept: text/plain\"\n\n ```\n\n## Observações\n\n- Certifique-se de que o formato da data seja estritamente YYYY-MM-DD para evitar erros de análise\n    \n- O endpoint é executado no localhost na porta 5176, indicando que este é um ambiente de desenvolvimento local\n    \n- O formato de resposta é texto simples conforme especificado no cabeçalho Accept\n    \n- Esta é uma operação somente leitura (método GET) e não modifica nenhum dado"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
